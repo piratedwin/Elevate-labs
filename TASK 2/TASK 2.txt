@@ -1,0 +1,44 @@
+Test Email:
+From: support@micros0ft-secure.com
+Subject: Urgent: Account Verification Required
+Body:
+Dear Customer,
+
+We noticed unusual activity in your account. To avoid suspension, please verify your details immediately by clicking the link below:
+
+http://secure-login.microsoft.verify-account.com
+
+Failure to act within 24 hours will result in account termination.
+
+Thank you,
+Microsoft Security Team
+
+1.Sender’s Email Address (Spoofing)
+- Appears to be from support@micros0ft-secure.com.
+- Notice the subtle typo: “micros0ft” with a zero instead of “o”. Classic spoofing tactic.
+
+2.Email Headers (Discrepancies)
+- Using a header analyzer (e.g., Microsoft Message Header Analyzer), you’d see the Return-Path doesn’t match the “From” domain.
+- SPF/DKIM/DMARC checks likely fail.
+
+3.Suspicious Links or Attachments
+- Link points to verify-account.com, not an official Microsoft domain.
+- Hovering reveals mismatch between displayed text and actual URL.
+
+4.Urgent or Threatening Language
+- “Failure to act within 24 hours will result in account termination.”
+- Creates panic to push immediate action.
+
+5.Mismatched URLs
+- Displayed as “secure-login.microsoft” but actually redirects to verify-account.com.
+
+6.Spelling/Grammar Errors
+- “micros0ft” domain typo.
+- Body uses awkward phrasing: “Failure to act…” instead of professional wording.
+
+7.Suspicious Attachments
+- In this sample, no attachment, but phishing emails often include malicious PDFs or Word files.
+ 
+links to check for spam email
+https://www.whatsmydns.net/#MX/micros0ft-secure.com
+https://www.whatsmydns.net/#TXT/micros0ft-secure.com

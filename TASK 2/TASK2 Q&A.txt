@@ -1,0 +1,43 @@
+1. What is Phishing?
+Phishing is a fraudulent attempt to obtain sensitive information (like passwords, credit card numbers, or personal data) by disguising as a trustworthy entity, usually through email, SMS, or fake websites.
+
+2. How to Identify a Phishing Email
+Suspicious sender address (slight misspellings, odd domains).
+Urgent or threatening language (“Your account will be locked!”).
+Unexpected attachments or links.
+Poor grammar or spelling mistakes.
+Generic greetings (“Dear Customer” instead of your name).
+
+3. What is Email Spoofing?
+Email spoofing is when attackers forge the sender’s address to make an email look like it comes from a trusted source. It’s often used in phishing to trick recipients into believing the message is legitimate.
+
+4. Why Are Phishing Emails Dangerous?
+They can steal login credentials.
+Spread malware via attachments or links.
+Lead to financial fraud or identity theft.
+Compromise entire organizations if one employee clicks.
+
+5. How Can You Verify the Sender’s Authenticity?
+Check the full email header for the real sending domain.
+Hover over links to see the actual URL.
+Contact the sender through official channels (not by replying).
+Use DKIM, SPF, and DMARC records to validate email authenticity.
+
+6. What Tools Can Analyze Email Headers?
+MxToolbox (online header analyzer).
+Google Admin Toolbox.
+Microsoft Message Header Analyzer (Outlook add-in).
+Command-line tools like exim or sendmail logs for deeper inspection. we can also use splunk tool to check for the logs
+
+7. What Actions Should Be Taken on Suspected Phishing Emails?
+Do not click links or open attachments.
+Report to your IT/security team.
+Block the sender/domain.
+Delete the email after reporting.
+If clicked, immediately change passwords and run malware scans.
+
+8. How Do Attackers Use Social Engineering in Phishing?
+Impersonation: Pretending to be a boss, bank, or government agency.
+Urgency: Pressuring victims to act quickly without thinking.
+Fear or reward: Threatening account closure or promising prizes.
+Trust exploitation: Using familiar logos, names, or language to lower suspicion.
