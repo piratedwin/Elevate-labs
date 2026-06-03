@@ -1,0 +1,49 @@
+1. What is an Open Port?
+Definition: An open port is a TCP or UDP communication endpoint that accepts incoming connections.
+Example: Port 80 (HTTP) or 443 (HTTPS) are open when a web server is running.
+States: Ports can be open, closed, or filtered (blocked by a firewall).
+
+2. How Does Nmap Perform a TCP SYN Scan?
+Technique: Known as a “half-open” or stealth scan.
+Process:
+Nmap sends a SYN packet to the target port.
+If the port is open, the target replies with SYN/ACK.
+Nmap immediately sends a RST (reset) instead of completing the handshake.
+Advantage: Faster and stealthier than a full TCP connect scan, making it harder to detect.
+
+3.Risks Associated with Open Ports
+Unauthorized Access: Attackers can exploit services running on open ports.
+Malware Distribution: Ports can be abused to spread malicious payloads.
+Denial of Service (DoS): Attackers may flood open ports with traffic.
+Information Leakage: Open ports reveal what services are running, aiding reconnaissance.
+
+4. Difference Between TCP and UDP Scanning
+TCP and UDP scanning differ mainly in how they probe and interpret responses from target systems. TCP scanning relies on the connection-oriented nature of TCP, typically using techniques like SYN scans to initiate a handshake and determine whether a port is open, closed, or filtered. This makes TCP scans more reliable and faster, but also easier to detect since they mimic legitimate connection attempts. UDP scanning, on the other hand, sends datagrams to target ports without establishing a connection. If a port is closed, the system usually responds with an ICMP “Port Unreachable” message, but if it’s open, there may be no response at all, making results less consistent and slower to obtain. While TCP scanning is ideal for services like web servers, SSH, or FTP, UDP scanning is used for protocols such as DNS, DHCP, and SNMP. In short, TCP scanning provides clearer results but is more visible, whereas UDP scanning is stealthier but less reliable.
+
+5. How Can Open Ports Be Secured?
+Close Unused Ports: Reduce attack surface.
+Restrict Access: Use firewalls and ACLs to limit who can connect.
+Network Segmentation: Isolate critical systems.
+Strong Authentication: Protect services with secure credentials.
+Regular Scanning: Continuously monitor with tools like Nmap.
+
+6. Firewall’s Role Regarding Ports
+Filtering: Blocks or allows traffic based on rules.
+Port Control: Can mark ports as filtered, making them invisible to scans.
+Defense Layer: Prevents unauthorized access to open services.
+
+7. What is a Port Scan and Why Do Attackers Perform It?
+Definition: A port scan probes a system to identify open, closed, or filtered ports.
+Purpose for Attackers:
+Map available services.
+Identify vulnerabilities.
+Plan exploitation strategies.
+Purpose for Defenders:
+Detect misconfigurations.
+Harden network security.
+
+8. How Does Wireshark Complement Port Scanning?
+Packet Analysis: Captures and inspects traffic generated during scans.
+Verification: Confirms how Nmap probes are received and responded to.
+Detection: Helps spot unusual traffic patterns or stealth scans.
+Learning Tool: Useful for understanding how different scan types behave “on the wire.”
