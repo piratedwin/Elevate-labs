@@ -1,0 +1,48 @@
+1. What is Wireshark Used For?
+Network troubleshooting: Identify latency, dropped packets, or misconfigurations.
+Security analysis: Detect suspicious traffic, malware communication, or reconnaissance.
+Protocol learning: Visualize TCP handshakes, DNS queries, HTTP requests, etc.
+Forensics: Investigate breaches by replaying captured traffic.
+
+2. What is a Packet?
+A packet is a small unit of data transmitted over a network.
+Contains headers (metadata like source/destination IP, port, protocol) and payload (actual data).
+Packets are the building blocks of all network communication.
+
+3. How to Filter Packets in Wireshark
+Use display filters to narrow down traffic:
+tcp → show only TCP packets.
+udp → show only UDP packets.
+dns → show DNS queries/responses.
+ip.addr == 192.168.1.10 → filter by IP.
+Wireshark supports thousands of protocol filters, accessible via the Display Filter Expression menu.
+
+4. Difference Between TCP and UDP
+TCP (Transmission Control Protocol): Connection-oriented, reliable, uses handshakes and acknowledgments.
+UDP (User Datagram Protocol): Connectionless, faster, but unreliable (no delivery guarantee).
+TCP is used for web browsing, email, file transfer; UDP is used for DNS, VoIP, streaming.
+
+5. What is a DNS Query Packet?
+A DNS query packet asks a DNS server to resolve a domain name into an IP address.
+Typically uses UDP port 53.
+Example: Query for www.google.com → DNS server responds with IP addresses.
+
+6. How Can Packet Capture Help in Troubleshooting?
+Detects network bottlenecks (e.g., retransmissions in TCP).
+Identifies misconfigured services (wrong DNS server, firewall blocking).
+Helps confirm whether traffic is reaching its destination.
+
+7. What is a Protocol?
+A protocol is a set of rules governing communication between devices.
+Examples: TCP, UDP, DNS, HTTP, HTTPS.
+Defines how packets are structured, transmitted, and interpreted.
+
+8. Can Wireshark Decrypt Encrypted Traffic?
+Yes, partially:
+Wireshark can decrypt traffic if you provide the right keys (e.g., SSL/TLS session keys).
+For HTTPS, you need the server’s private key or session secrets.
+No, generally: Without keys, encrypted payloads remain unreadable, though headers and metadata are still visible.
+
+
+Reference:
+https://www.geeksforgeeks.org/ethical-hacking/understanding-https-tcp-udp-and-dns-packets-with-wireshark/

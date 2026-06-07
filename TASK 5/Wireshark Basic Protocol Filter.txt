@@ -1,0 +1,132 @@
+Basic Protocol Filter:
+http
+https
+dns
+tcp
+udp
+icmp
+arp
+ftp
+smtp
+ssh
+tls
+ip
+ipv6
+
+IP Address Filters:
+Source IP: ip.src == 192.168.1.1  //field operator value (Only packets sent from this IP) My IP:192.168.0.101
+Destination IP: ip.dst == 8.8.8.8 //field operator value (Only packets going to this IP)
+Both directions: ip.addr == 192.168.1.1 //Packets where this IP is either source or destination
+
+Port Filters:
+tcp.port == 80  //Traffic using port 80 (usually HTTP)
+udp.port == 53  //Traffic using port 53 (DNS)
+tcp.srcport == 443 //Packets coming from port 443
+tcp.dstport == 22  //Packets going to port 22 (SSH)
+
+TCP Filters:
+tcp.flags.syn == 1  //Packet used to start a connection
+tcp.flags.ack == 1  //Packet acknowledging data received
+tcp.flags.fin == 1  //Connection closing
+tcp.flags.reset == 1 //Connection abruptly terminated
+tcp.seq
+tcp.ack
+tcp.window_size
+tcp.analysis.retransmission
+
+HTTP Filters:
+http.request  //Only HTTP requests (client → server)
+http.response //Only responses (server → client)
+http.request.method == "GET" //Only GET requests (fetching data)
+http.request.method == "POST" //Page not found errors
+http.host
+http.user_agent
+http.response.code == 200
+http.response.code == 404
+
+DNS Filters:
+dns
+dns.qry.name == "example.com"  //Looking for that specific domain
+dns.flags.response == 0   // Query DNS query (asking for IP)
+dns.flags.response == 1   // Response DNS response (answer returned)
+dns.a
+dns.aaaa
+dns.cname
+
+TLS / HTTPS Filters:
+tls  //Encrypted HTTPS traffic
+ssl
+tls.handshake
+tls.handshake.type == 1   // Client Hello
+tls.handshake.type == 2   // Server Hello
+tls.record.version
+``
+
+ICMP Filters:
+icmp
+icmp.type == 8    // Echo request (ping)
+icmp.type == 0    // Echo reply
+
+ARP Filters:
+arp
+arp.opcode == 1   // request
+arp.opcode == 2   // reply
+
+MAC Address Filters:
+eth.src == 00:11:22:33:44:55
+eth.dst == aa:bb:cc:dd:ee:ff
+
+Packet Size / Length:
+frame.len > 1000
+frame.len < 100
+``
+
+Time-Based Filters:
+frame.time >= "2025-01-01 10:00:00"
+frame.time_delta > 1
+
+Error / Analysis Filters:
+tcp.analysis.retransmission
+tcp.analysis.lost_segment
+tcp.analysis.duplicate_ack
+expert.severity == error
+
+String Matching Filters:
+frame contains "login"
+tcp contains "password"
+http contains "user"
+
+Logical Operators:
+&&   (AND)
+||   (OR)
+!    (NOT)
+Examples: http && tcp.port == 80
+dns || http
+ip.src == 192.168.1.1 && tcp.port == 443
+tcp && !http
+
+Capture Filters (Different from Display Filters):
+host 192.168.1.1
+port 80
+tcp
+udp port 53
+net 192.168.1.0/24
+
+Advanced Filters:
+ip.ttl < 10
+tcp.window_size == 0
+frame.number == 100
+tcp.stream == 5
+
+Protocol-Specific Fields:
+Each protocol has hundreds of fields, e.g.:
+
+http.*
+dns.*
+tcp.*
+ip.*
+tls.*
+
+✅ You can explore them in Wireshark:
+
+Click a packet → expand fields → right-click → Apply as Filter
