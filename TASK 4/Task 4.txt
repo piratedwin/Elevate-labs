@@ -1,0 +1,4 @@
+Task 4:
+Opened Windows Defender Firewall with Advanced Security >> Navigated to Inbound Rules, reviewed all the rules in the intel core i5 system, and since I could not find the telnet port 23 rule in inbound, so created one telnet inbound tool, and then blocked the connection, and tried to access via command prompt and it was failed.
+
+

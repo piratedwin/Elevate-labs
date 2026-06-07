@@ -1,0 +1,45 @@
+1. What is a Firewall?
+A firewall is a security system that monitors and controls network traffic based on predefined rules. It acts as a barrier between trusted internal networks and untrusted external networks (like the internet).
+
+2. Difference Between Stateful and Stateless Firewall
+Stateful Firewall: Tracks the state of active connections. It knows whether a packet is part of an existing session, making decisions based on context.
+
+Stateless Firewall: Examines packets individually without context. It applies simple rules (like IP and port filtering) but doesn’t track sessions.
+
+3. What are Inbound and Outbound Rules?
+Inbound Rules: Control traffic coming into your system (e.g., block port 23 to prevent Telnet access).
+
+Outbound Rules: Control traffic going out of your system (e.g., restrict applications from sending data to the internet).
+
+4. How Does UFW Simplify Firewall Management?
+UFW (Uncomplicated Firewall) is a Linux firewall front-end for iptables.
+It simplifies management with easy commands like:
+ufw allow 22 → allows SSH.
+ufw deny 23 → blocks Telnet.
+No need to manually write complex iptables rules.
+
+5. Why Block Port 23 (Telnet)?
+Telnet transmits data in plain text (no encryption).
+Attackers can easily intercept usernames and passwords.
+Modern systems use SSH (port 22) instead, which encrypts communication.
+
+6. Common Firewall Mistakes
+Leaving unnecessary ports open.
+Misconfigured rules that block legitimate traffic.
+Not updating firewall policies after system changes.
+Overly permissive rules (e.g., allowing “any” IP).
+Forgetting to monitor logs for suspicious activity.
+
+7. How Does a Firewall Improve Network Security?
+Blocks unauthorized access.
+Prevents malware from communicating externally.
+Segments networks to contain breaches.
+Enforces compliance with security policies.
+
+8. What is NAT in Firewalls?
+Network Address Translation (NAT): A firewall feature that hides internal IP addresses by mapping them to a single public IP.
+
+Benefits:
+Adds privacy by masking internal hosts.
+Conserves public IP addresses.
+Provides an extra layer of security.
