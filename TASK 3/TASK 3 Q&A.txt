@@ -1,0 +1,42 @@
+1. What is Vulnerability Scanning?
+Vulnerability scanning is the automated process of identifying security weaknesses in systems, networks, or applications. Tools probe for misconfigurations, outdated software, or exploitable flaws.
+
+2. Difference Between Vulnerability Scanning and Penetration Testing
+Vulnerability Scanning: Automated, broad, and identifies potential issues. It’s like a health check-up.
+Penetration Testing: Manual or semi-automated, simulates real-world attacks to exploit vulnerabilities. It’s like a stress test.
+Scanning finds what could be wrong, pen testing shows what can actually be broken.
+
+3. Common Vulnerabilities in Personal Computers
+Outdated operating systems or software.
+Weak or reused passwords.
+Missing patches for browsers, plugins, or drivers.
+Misconfigured firewalls or antivirus.
+Unencrypted sensitive files.
+
+4. How Do Scanners Detect Vulnerabilities?
+Signature-based checks: Compare system details against known vulnerability databases.
+Banner grabbing: Identify software versions from service responses.
+Configuration analysis: Detect weak settings (e.g., default passwords).
+Patch verification: Check if critical updates are missing.
+
+5. What is CVSS?
+The Common Vulnerability Scoring System (CVSS) is a standardized framework for rating the severity of vulnerabilities.
+Scores range from 0.0 (none) to 10.0 (critical).
+Factors include exploitability, impact, and environmental context.
+
+6. How Often Should Vulnerability Scans Be Performed?
+Best practice: At least monthly or quarterly.
+Critical systems: Weekly or continuous scanning.
+After changes: Run scans after major updates, new deployments, or incidents.
+
+7. What is a False Positive in Vulnerability Scanning?
+A false positive occurs when a scanner flags a vulnerability that doesn’t actually exist.
+Example: Reporting a service as outdated when it’s patched but misreports its version.
+Manual validation helps reduce noise.
+
+8. How Do You Prioritize Vulnerabilities?
+Severity: Use CVSS scores (critical first).
+Exploit availability: Focus on flaws with known exploits.
+Asset value: Prioritize systems holding sensitive data.
+Business impact: Consider downtime, compliance, or customer trust.
+Compensating controls: If mitigations exist (e.g., firewall rules), urgency may be lower.
