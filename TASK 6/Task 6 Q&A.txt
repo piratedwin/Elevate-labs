@@ -1,0 +1,23 @@
+1.What makes a password strong?  
+A strong password is one that is long, unpredictable, and contains a mix of uppercase and lowercase letters, numbers, and special symbols. It avoids common words, personal information, or simple patterns, making it resistant to guessing or automated attacks.
+
+2.What are common password attacks?
+Attackers often use brute force, where they try every possible combination, or dictionary attacks, where they test common words and leaked passwords. Other methods include credential stuffing (using stolen passwords from breaches) and phishing, where users are tricked into revealing their credentials.
+
+3.Why is password length important?
+Length increases the number of possible combinations exponentially, making brute force attacks far less practical. A short password can be cracked in seconds, while a long one with varied characters may take years or even centuries to break.
+
+4.What is a dictionary attack?
+A dictionary attack uses precompiled lists of common words, phrases, or passwords to guess credentials quickly. It exploits predictable human behavior, such as using simple words or popular passwords like “123456” or “password.”
+
+5.What is multi-factor authentication?
+Multi-factor authentication (MFA) adds an extra layer of security by requiring more than just a password. It combines something you know (password), something you have (phone or token), or something you are (fingerprint or face recognition), making unauthorized access much harder.
+
+6.How do password managers help?
+Password managers securely store and generate complex, unique passwords for each account. They reduce the need to remember multiple credentials, prevent reuse across sites, and protect against weak or repeated passwords.
+
+7.What are passphrases?
+Passphrases are longer sequences of words or phrases that are easier to remember but harder to crack. For example, “BlueTigerRunsFast@2026” is stronger than a short random word because its length and unpredictability increase security.
+
+8.What are common mistakes in password creation?
+Typical mistakes include using short or simple passwords, reusing the same password across multiple accounts, relying on personal information like birthdays, or sticking to predictable patterns. These errors make passwords vulnerable to both brute force and dictionary attacks.
