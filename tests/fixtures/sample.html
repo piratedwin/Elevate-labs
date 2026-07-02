@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head><title>Sample</title></head>
+  <body>
+    <a href="/page1">Page 1</a>
+    <a href="/page2#frag">Page 2</a>
+
+    <form action="/submit1" method="post">
+      <input type="text" name="q" value="">
+      <input type="hidden" name="csrf_token" value="abcdef">
+      <button>Send</button>
+    </form>
+
+    <form action="/submit2" method="post">
+      <input type="text" name="search" value="">
+      <button>Send</button>
+    </form>
+
+    <p>SQL Error example: You have an error in your SQL syntax near 'FROM'</p>
+    <p>Reflected payload: &lt;script&gt;alert('xss')&lt;/script&gt;</p>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+[
+  {
+    "start_url": "https://canadasmartstops.com",
+    "timestamp": 1781933471,
+    "results": [],
+    "job_id": 1781933470817
+  },
+  {
+    "start_url": "https://canadasmartstops.com",
+    "timestamp": 1781933576,
+    "results": [],
+    "job_id": 1781933575325
+  },
+  {
+    "start_url": "https://canadasmartstops.com",
+    "timestamp": 1781933576,
+    "results": [],
+    "job_id": 1781933575325,
+    "reports": {
+      "json": "d:\\amc\\samp\\Python\\reports\\report_1781933575325.json",
+      "csv": "d:\\amc\\samp\\Python\\reports\\report_1781933575325.csv",
+      "html": "d:\\amc\\samp\\Python\\reports\\report_1781933575325.html"
+    }
+  },
+  {
+    "start_url": "https://canadasmartstops.com",
+    "timestamp": 1781933599,
+    "results": [],
+    "job_id": 1781933598002,
+    "reports": {
+      "json": "d:\\amc\\samp\\Python\\reports\\report_1781933598002.json",
+      "csv": "d:\\amc\\samp\\Python\\reports\\report_1781933598002.csv",
+      "html": "d:\\amc\\samp\\Python\\reports\\report_1781933598002.html"
+    }
+  },
+  {
+    "start_url": "https://canadasmartstops.com",
+    "timestamp": 1781934185,
+    "results": [],
+    "job_id": 1781934184845,
+    "reports": {
+      "json": "d:\\amc\\samp\\Python\\reports\\report_1781934184845.json",
+      "csv": "d:\\amc\\samp\\Python\\reports\\report_1781934184845.csv",
+      "html": "d:\\amc\\samp\\Python\\reports\\report_1781934184845.html"
+    }
+  },
+  {
+    "start_url": "https://test.edwinw1.net",
+    "timestamp": 1781935855,
+    "results": [],
+    "job_id": 1781935855883,
+    "reports": {
+      "json": "d:\\amc\\samp\\Python\\reports\\report_1781935855883.json",
+      "csv": "d:\\amc\\samp\\Python\\reports\\report_1781935855883.csv",
+      "html": "d:\\amc\\samp\\Python\\reports\\report_1781935855883.html",
+      "zip": "d:\\amc\\samp\\Python\\reports\\report_1781935855883.zip"
+    }
+  }
+]

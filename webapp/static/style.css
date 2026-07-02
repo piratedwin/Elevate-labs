@@ -1,0 +1,6 @@
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f7f7;color:#222}
+.container{max-width:900px;margin:40px auto;background:#fff;padding:24px;border-radius:6px}
+input[name=target]{width:70%;padding:8px;margin-right:8px}
+button{padding:8px 12px}
+table{width:100%;border-collapse:collapse;margin-top:16px}
+th,td{padding:8px;border:1px solid #ddd}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Scan Results</h1>
+      <p>Start URL: {{ result.start_url }}</p>
+      <p>Timestamp: {{ result.timestamp }}</p>
+      {% if result.results %}
+        <table>
+          <thead><tr><th>Type</th><th>URL</th><th>Severity</th><th>Evidence</th></tr></thead>
+          <tbody>
+            {% for r in result.results %}
+              <tr>
+                <td>{{ r.type }}</td>
+                <td>{{ r.url }}</td>
+                <td>{{ r.severity }}</td>
+                <td>{{ r.evidence }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>No issues found (or scan failed).</p>
+      {% endif %}
+      <p><a href="/">Back</a></p>
+    </div>
+  </body>
+</html>

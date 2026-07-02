@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scan History</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Scan History</h1>
+      <p><a href="/">Start new scan</a></p>
+      {% if entries %}
+        <table>
+          <thead><tr><th>Job ID</th><th>Start URL</th><th>Timestamp</th><th>Results</th></tr></thead>
+          <tbody>
+            {% for e in entries|reverse %}
+              <tr>
+                <td><a href="/result/{{ e.job_id }}">{{ e.job_id }}</a></td>
+                <td>{{ e.start_url }}</td>
+                <td>{{ e.timestamp }}</td>
+                <td>{{ e.results|length }}</td>
+                <td>
+                  {% if e.reports %}
+                    <a href="/download/{{ e.job_id }}/json">JSON</a>
+                    <a href="/download/{{ e.job_id }}/html">HTML</a>
+                    <a href="/download/{{ e.job_id }}/csv">CSV</a>
+                    {% if e.reports.pdf %}
+                      <a href="/download/{{ e.job_id }}/pdf">PDF</a>
+                    {% endif %}
+                    {% if e.reports.zip %}
+                      <a href="/download/{{ e.job_id }}/zip">ZIP</a>
+                    {% endif %}
+                  {% else %}
+                    -
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>No scans yet.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

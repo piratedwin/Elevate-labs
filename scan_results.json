@@ -1,0 +1,53 @@
+{
+  "start_url": "http://127.0.0.1:36063/",
+  "timestamp": 1781938080,
+  "results": [
+    {
+      "type": "CSRF",
+      "url": "http://127.0.0.1:36063/submit",
+      "evidence": "Form missing token-like hidden input",
+      "severity": "Medium",
+      "owasp": "Cross-Site Request Forgery (OWASP Top 10)"
+    },
+    {
+      "type": "XSS",
+      "url": "http://127.0.0.1:36063/submit",
+      "payload": "<script>alert('xss')</script>",
+      "evidence": "<script>alert('xss')</script>",
+      "severity": "High",
+      "owasp": "Cross-Site Scripting (OWASP Top 10)"
+    },
+    {
+      "type": "SQLi",
+      "url": "http://127.0.0.1:36063/submit",
+      "payload": "' OR '1'='1",
+      "evidence": "Database error string in response",
+      "severity": "High",
+      "owasp": "Injection (OWASP Top 10)"
+    },
+    {
+      "type": "SQLi",
+      "url": "http://127.0.0.1:36063/submit",
+      "payload": "\" OR \"1\"=\"1",
+      "evidence": "Database error string in response",
+      "severity": "High",
+      "owasp": "Injection (OWASP Top 10)"
+    },
+    {
+      "type": "SQLi",
+      "url": "http://127.0.0.1:36063/submit",
+      "payload": "' OR 1=1--",
+      "evidence": "Database error string in response",
+      "severity": "High",
+      "owasp": "Injection (OWASP Top 10)"
+    },
+    {
+      "type": "SQLi",
+      "url": "http://127.0.0.1:36063/submit",
+      "payload": "1 OR 1=1",
+      "evidence": "Database error string in response",
+      "severity": "High",
+      "owasp": "Injection (OWASP Top 10)"
+    }
+  ]
+}

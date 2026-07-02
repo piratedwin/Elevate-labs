@@ -1,0 +1,8 @@
+Flask>=2.0
+requests>=2.25
+beautifulsoup4>=4.9
+lxml>=4.6
+
+# Optional: generate PDF reports (requires wkhtmltopdf binary installed)
+pdfkit>=1.0
+pytest>=7.0
